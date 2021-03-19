@@ -49,7 +49,7 @@ export default async function fetchStoreApi<T>(
   }
 
   // If something was removed, the response will be empty
-  return res.status === 204 ? null : await res.json()
+  return res.status === 204 ? null : res.json()
 }
 
 function getRawHeaders(res: Response) {
